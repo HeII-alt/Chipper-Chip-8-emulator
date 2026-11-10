@@ -1,0 +1,125 @@
+:root {
+    --s: 10;
+}
+
+body {
+    background: #1b1b24;
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#computer {
+    position: relative;
+    width: calc(54px * var(--s));
+    height: calc(51px * var(--s));
+    background: url(sprites/PC_sprite_8x.png) no-repeat;
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+}
+
+#crt{
+    position: absolute;
+    left: calc(6px * var(--s));
+    top: calc(11px * var(--s));
+    width: calc(42px * var(--s));
+    height: calc(32px * var(--s));
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#screen {
+    width: 100%;
+    height:auto;
+    image-rendering: pixelated;
+}
+
+#carts {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.cart {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.cart:hover {
+    transform: translateY(-6px);
+}
+
+.cart.selected {
+    transform: translateY(-12px);
+    outline: 3px solid #f0c040;
+}
+
+.cart:focus {
+    outline: none;
+}
+
+.cart img{
+    width:153px;
+    height: 192px;
+    image-rendering: pixelated;
+    display: block;
+}
+
+#pauseBtn {
+    appearance: none;
+    box-sizing: border-box;
+    margin-top: 16px;
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url(sprites/btn_pause.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+    cursor: pointer;
+}
+
+#pauseBtn.off {
+    background-image: url(sprites/btn_play.png);
+}
+
+#pauseBtn:active {
+    transform: translateY(2px);
+}
+
+#pauseBtn:focus{
+    outline: none;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+#romSelect {
+    font-family: monospace;
+    font-size: 16px;
+    padding: 8px 12px;
+    background: #2f3034;
+    color: #e0e0e0;
+    border: 3px solid #000;
+    cursor: pointer;
+}
+
+#romSelect:focus {
+    outline: 2px solid #f0c040;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CHIP-8</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="computer">
+      <div id="crt">
+        <canvas id="screen" width="640" height="320"></canvas>
+      </div>
+    </div>
+
+    <div id="controls">
+      <button id="pauseBtn" aria-label="Pause"></button>
+      <select id="romSelect">
+        <option value="">Choose a ROM...</option>
+      </select>
+    </div>
+
+    <div id="carts">
+      <button class="cart" data-rom="roms/pong.ch8">
+        <img src="sprites/pong.png" alt="Pong">
+      </button>
+      <button class="cart" data-rom="roms/breakout.ch8">
+        <img src="sprites/breakout.png" alt="Breakout">
+      </button>
+      <button class="cart" data-rom="roms/invaders.ch8">
+        <img src="sprites/invaders.png" alt="Invaders">
+      </button>
+      <button class="cart" data-rom="roms/tetris.ch8">
+        <img src="sprites/tetris.png" alt="Tetris">
+      </button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
